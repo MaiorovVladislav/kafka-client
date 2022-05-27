@@ -10,3 +10,15 @@
 /Users/vladislav/RiderProjects/KafkaClient/KafkaClient/obj/Debug/net6.0/refint/KafkaClient.dll
 /Users/vladislav/RiderProjects/KafkaClient/KafkaClient/obj/Debug/net6.0/KafkaClient.pdb
 /Users/vladislav/RiderProjects/KafkaClient/KafkaClient/obj/Debug/net6.0/ref/KafkaClient.dll
+\\msk.mts.ru\MSK\User\Folders\00\01\vvmajor8\Desktop\kafka-client-master\KafkaClient\obj\Debug\net6.0\KafkaClient.csproj.AssemblyReference.cache
+\\msk.mts.ru\MSK\User\Folders\00\01\vvmajor8\Desktop\kafka-client-master\KafkaClient\obj\Debug\net6.0\KafkaClient.GeneratedMSBuildEditorConfig.editorconfig
+\\msk.mts.ru\MSK\User\Folders\00\01\vvmajor8\Desktop\kafka-client-master\KafkaClient\obj\Debug\net6.0\KafkaClient.AssemblyInfoInputs.cache
+\\msk.mts.ru\MSK\User\Folders\00\01\vvmajor8\Desktop\kafka-client-master\KafkaClient\obj\Debug\net6.0\KafkaClient.AssemblyInfo.cs
+\\msk.mts.ru\MSK\User\Folders\00\01\vvmajor8\Desktop\kafka-client-master\KafkaClient\obj\Debug\net6.0\KafkaClient.csproj.CoreCompileInputs.cache
+\\msk.mts.ru\MSK\User\Folders\00\01\vvmajor8\Desktop\kafka-client-master\KafkaClient\obj\Debug\net6.0\KafkaClient.dll
+\\msk.mts.ru\MSK\User\Folders\00\01\vvmajor8\Desktop\kafka-client-master\KafkaClient\obj\Debug\net6.0\refint\KafkaClient.dll
+\\msk.mts.ru\MSK\User\Folders\00\01\vvmajor8\Desktop\kafka-client-master\KafkaClient\obj\Debug\net6.0\KafkaClient.pdb
+\\msk.mts.ru\MSK\User\Folders\00\01\vvmajor8\Desktop\kafka-client-master\KafkaClient\bin\Debug\net6.0\KafkaClient.deps.json
+\\msk.mts.ru\MSK\User\Folders\00\01\vvmajor8\Desktop\kafka-client-master\KafkaClient\bin\Debug\net6.0\KafkaClient.dll
+\\msk.mts.ru\MSK\User\Folders\00\01\vvmajor8\Desktop\kafka-client-master\KafkaClient\bin\Debug\net6.0\KafkaClient.pdb
+\\msk.mts.ru\MSK\User\Folders\00\01\vvmajor8\Desktop\kafka-client-master\KafkaClient\obj\Debug\net6.0\ref\KafkaClient.dll

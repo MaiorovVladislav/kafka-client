@@ -1,16 +1,23 @@
+using KafkaClient.Configurations;
+using Microsoft.Extensions.DependencyInjection;
+
 namespace KafkaClient;
 
 public class KafkaClientManagerBuilder
 {
-    public KafkaClientManager AddCluster(Action<IClusterConfigurationBuilder> cluster)
+    private readonly IServiceCollection _services;
+
+    public KafkaClientManagerBuilder(IServiceCollection services)
     {
-        var clusterConfigurationBuilder = new ClusterConfigurationBuilder();
+        _services = services;
+    }
+
+    public KafkaClientManager AddKafkaClient(Action<IClusterConfigurationBuilder> cluster)
+    {
+        var clusterConfigurationBuilder = new ClusterConfigurationBuilder(_services);
 
         cluster.Invoke(clusterConfigurationBuilder);
 
-        return new KafkaClientManager
-        {
-            Cluster = clusterConfigurationBuilder.Build()
-        };
+        return new KafkaClientManager(clusterConfigurationBuilder.Build());
     }
 }

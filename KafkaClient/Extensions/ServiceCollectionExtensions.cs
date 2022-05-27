@@ -15,7 +15,7 @@ public static class ServiceCollectionExtensions
     private static IServiceCollection AddKafka(this IServiceCollection services,
         Func<KafkaClientManagerBuilder, KafkaClientManager> kafkaClientManagerBuilder)
     {
-        var builder = new KafkaClientManagerBuilder();
+        var builder = new KafkaClientManagerBuilder(services);
 
         var kafkaClientManager = kafkaClientManagerBuilder.Invoke(builder);
 

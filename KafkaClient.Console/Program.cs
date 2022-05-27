@@ -1,11 +1,13 @@
-﻿using KafkaClient;
+﻿using KafkaClient.Console;
 using KafkaClient.Extensions;
+using KafkaClient.Handlers;
+using KafkaClient.Messages;
 using Microsoft.Extensions.DependencyInjection;
 
 var collection = new ServiceCollection();
 
 collection.AddKafkaHostedService(builder => builder
-    .AddCluster(cluster => cluster
+    .AddKafkaClient(cluster => cluster
         .AddBootstrapsServers("localhost:9092")
         .AddSecurityInformation(security => security
             .AddSslKeyLocation("")
@@ -15,17 +17,20 @@ collection.AddKafkaHostedService(builder => builder
             .SetTopicDestination("testTopic")
             .SetGroupId("test")
             .SetAutoCommitOffset(false)
-            .SetMessageHandler(new CloudEventMessageHandler()))
+            .SetMessageHandler<CloudEventMessageHandler>())
         .AddConsumer(consumer => consumer
             .SetTopicDestination("testTopic")
             .SetGroupId("test")
             .SetAutoCommitOffset(false)
-            .SetMessageHandler(new CloudEventMessageHandler()))));
+            .SetMessageHandler<CloudEventMessageHandler>())));
 
-public class CloudEventMessageHandler : IMessageHandler
-{
-    public Task Invoke(IMessageContext messageContext)
+    namespace KafkaClient.Console
     {
-        throw new NotImplementedException();
+        public class CloudEventMessageHandler : IMessageHandler
+        {
+            public Task Invoke(IMessageContext messageContext)
+            {
+                throw new NotImplementedException();
+            }
+        }
     }
-}

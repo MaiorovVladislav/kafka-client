@@ -7,4 +7,4 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = KafkaClient
-build_property.ProjectDir = /Users/vladislav/RiderProjects/KafkaClient/KafkaClient/
+build_property.ProjectDir = \\msk.mts.ru\MSK\User\Folders\00\01\vvmajor8\Desktop\kafka-client\kafka-client\KafkaClient\

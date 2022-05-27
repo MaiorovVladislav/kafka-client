@@ -1,20 +1,30 @@
+using KafkaClient.Configurations;
+using KafkaClient.Consumers;
+
 namespace KafkaClient;
 
 public class KafkaClientManager
 {
-    public ClusterConfiguration? Cluster { get; set; }
+    private IEnumerable<IConsumerWorker>? _workers;
+
+    public ClusterConfiguration? Cluster { get; }
+
     private List<ConsumerConfiguration>? ConsumerConfigurations => Cluster?.Consumers;
-    private List<ConsumerWorker>? _workers;
-        
+
+    public KafkaClientManager(ClusterConfiguration clusterConfiguration)
+    {
+        Cluster = clusterConfiguration;
+    }
+
     public async Task StartAsync(CancellationToken cancellationToken)
     {
         ArgumentNullException.ThrowIfNull(Cluster);
         ArgumentNullException.ThrowIfNull(ConsumerConfigurations);
-        
+
         _workers = ConsumerConfigurations
-                .Select(consumerConfiguration => 
-                    new ConsumerWorker(consumerConfiguration))
-                .ToList();
+            .Select(consumerConfiguration =>
+                new ConsumerWorker(consumerConfiguration))
+            .ToList();
 
         await Task
             .WhenAll(_workers.Select(_ => _.StartAsync(cancellationToken)))

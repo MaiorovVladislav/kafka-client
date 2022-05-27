@@ -1,33 +1,40 @@
 {
   "format": 1,
   "restore": {
-    "/Users/vladislav/RiderProjects/KafkaClient/KafkaClient.Console/KafkaClient.Console.csproj": {}
+    "\\\\msk.mts.ru\\MSK\\User\\Folders\\00\\01\\vvmajor8\\Desktop\\kafka-client\\kafka-client\\KafkaClient.Console\\KafkaClient.Console.csproj": {}
   },
   "projects": {
-    "/Users/vladislav/RiderProjects/KafkaClient/KafkaClient.Console/KafkaClient.Console.csproj": {
+    "\\\\msk.mts.ru\\MSK\\User\\Folders\\00\\01\\vvmajor8\\Desktop\\kafka-client\\kafka-client\\KafkaClient.Console\\KafkaClient.Console.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/vladislav/RiderProjects/KafkaClient/KafkaClient.Console/KafkaClient.Console.csproj",
+        "projectUniqueName": "\\\\msk.mts.ru\\MSK\\User\\Folders\\00\\01\\vvmajor8\\Desktop\\kafka-client\\kafka-client\\KafkaClient.Console\\KafkaClient.Console.csproj",
         "projectName": "KafkaClient.Console",
-        "projectPath": "/Users/vladislav/RiderProjects/KafkaClient/KafkaClient.Console/KafkaClient.Console.csproj",
-        "packagesPath": "/Users/vladislav/.nuget/packages/",
-        "outputPath": "/Users/vladislav/RiderProjects/KafkaClient/KafkaClient.Console/obj/",
+        "projectPath": "\\\\msk.mts.ru\\MSK\\User\\Folders\\00\\01\\vvmajor8\\Desktop\\kafka-client\\kafka-client\\KafkaClient.Console\\KafkaClient.Console.csproj",
+        "packagesPath": "C:\\Users\\vvmajor8\\.nuget\\packages\\",
+        "outputPath": "\\\\msk.mts.ru\\MSK\\User\\Folders\\00\\01\\vvmajor8\\Desktop\\kafka-client\\kafka-client\\KafkaClient.Console\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/vladislav/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\vvmajor8\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://nexus.mtsit.local:8081/repository/mts-it/": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://artifactory.mts.ru/artifactory/api/nuget/nuget-ecat-epc-nuget-local": {},
+          "https://nexus.services.mts.ru/repository/nuget-mango-platform/": {},
+          "https://nexus.services.mts.ru/repository/nuget-obsansible/": {},
+          "https://nexus.services.mts.ru/repository/nuget.org-proxy/": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/vladislav/RiderProjects/KafkaClient/KafkaClient/KafkaClient.csproj": {
-                "projectPath": "/Users/vladislav/RiderProjects/KafkaClient/KafkaClient/KafkaClient.csproj"
+              "\\\\msk.mts.ru\\MSK\\User\\Folders\\00\\01\\vvmajor8\\Desktop\\kafka-client\\kafka-client\\KafkaClient\\KafkaClient.csproj": {
+                "projectPath": "\\\\msk.mts.ru\\MSK\\User\\Folders\\00\\01\\vvmajor8\\Desktop\\kafka-client\\kafka-client\\KafkaClient\\KafkaClient.csproj"
               }
             }
           }
@@ -66,27 +73,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.300/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/vladislav/RiderProjects/KafkaClient/KafkaClient/KafkaClient.csproj": {
+    "\\\\msk.mts.ru\\MSK\\User\\Folders\\00\\01\\vvmajor8\\Desktop\\kafka-client\\kafka-client\\KafkaClient\\KafkaClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/vladislav/RiderProjects/KafkaClient/KafkaClient/KafkaClient.csproj",
+        "projectUniqueName": "\\\\msk.mts.ru\\MSK\\User\\Folders\\00\\01\\vvmajor8\\Desktop\\kafka-client\\kafka-client\\KafkaClient\\KafkaClient.csproj",
         "projectName": "KafkaClient",
-        "projectPath": "/Users/vladislav/RiderProjects/KafkaClient/KafkaClient/KafkaClient.csproj",
-        "packagesPath": "/Users/vladislav/.nuget/packages/",
-        "outputPath": "/Users/vladislav/RiderProjects/KafkaClient/KafkaClient/obj/",
+        "projectPath": "\\\\msk.mts.ru\\MSK\\User\\Folders\\00\\01\\vvmajor8\\Desktop\\kafka-client\\kafka-client\\KafkaClient\\KafkaClient.csproj",
+        "packagesPath": "C:\\Users\\vvmajor8\\.nuget\\packages\\",
+        "outputPath": "\\\\msk.mts.ru\\MSK\\User\\Folders\\00\\01\\vvmajor8\\Desktop\\kafka-client\\kafka-client\\KafkaClient\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/vladislav/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\vvmajor8\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://nexus.mtsit.local:8081/repository/mts-it/": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://artifactory.mts.ru/artifactory/api/nuget/nuget-ecat-epc-nuget-local": {},
+          "https://nexus.services.mts.ru/repository/nuget-mango-platform/": {},
+          "https://nexus.services.mts.ru/repository/nuget-obsansible/": {},
+          "https://nexus.services.mts.ru/repository/nuget.org-proxy/": {}
         },
         "frameworks": {
           "net6.0": {
@@ -107,6 +121,10 @@
             "Confluent.Kafka": {
               "target": "Package",
               "version": "[1.9.0-RC10, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[6.0.0, )"
             },
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
@@ -132,7 +150,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.300/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
