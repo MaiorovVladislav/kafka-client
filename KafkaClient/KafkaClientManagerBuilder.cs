@@ -1,4 +1,5 @@
 using KafkaClient.Configurations;
+using KafkaClient.Producers;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace KafkaClient;
@@ -18,6 +19,12 @@ public class KafkaClientManagerBuilder
 
         cluster.Invoke(clusterConfigurationBuilder);
 
-        return new KafkaClientManager(clusterConfigurationBuilder.Build());
+        var clusterConfiguration = clusterConfigurationBuilder.Build();
+
+        var producerAccessor = new ProducerAccessor(clusterConfiguration.Producers.Select(_ => _.CreateProducer()));
+        
+        _services.AddSingleton((IProducerAccessor)producerAccessor);
+
+        return new KafkaClientManager(clusterConfiguration, producerAccessor);
     }
 }

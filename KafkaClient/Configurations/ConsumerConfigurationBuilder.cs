@@ -23,7 +23,7 @@ public class ConsumerConfigurationBuilder : IConsumerConfigurationBuilder
     private bool _enableAutoCommit;
     private ConsumerConfig _consumerConfig = null!;
 
-    private IServiceCollection _services;
+    private readonly IServiceCollection _services;
     private Type _typeMessageHandler;
 
     public ConsumerConfigurationBuilder(IServiceCollection services)
@@ -35,6 +35,7 @@ public class ConsumerConfigurationBuilder : IConsumerConfigurationBuilder
         where TMessageHandler : IMessageHandler
     {
         _typeMessageHandler = typeof(TMessageHandler);
+        
         _services.AddSingleton(_typeMessageHandler);
 
         return this;

@@ -4,5 +4,5 @@ namespace KafkaClient.Handlers;
 
 public interface IMessageHandler
 {
-    Task Invoke(IMessageContext context);
+    Task Invoke(IConsumeMessageContext<string, CloudEvent> context);
 }

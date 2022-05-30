@@ -1,3 +1,4 @@
+using KafkaClient.Producers;
 using KafkaClient.Security;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -9,7 +10,10 @@ public interface IClusterConfigurationBuilder
 
     IClusterConfigurationBuilder AddConsumer(Action<IConsumerConfigurationBuilder> consumer);
 
-    IClusterConfigurationBuilder AddSecurityInformation(Action<SecurityInformationBuilder> securityInformation);
+    IClusterConfigurationBuilder AddSecurityInformation(bool enable,
+        Action<SecurityInformationBuilder> securityInformation);
+
+    IClusterConfigurationBuilder AddProducer(string producerName, Action<IProducerConfigurationBuilder> producer);
 }
 
 public class ClusterConfigurationBuilder : IClusterConfigurationBuilder
@@ -17,14 +21,17 @@ public class ClusterConfigurationBuilder : IClusterConfigurationBuilder
     private string _bootstrapsServers = default!;
 
     private SecurityInformationBuilder? _securityInformationBuilder;
+
     private readonly IServiceCollection _services;
+
+    private List<ConsumerConfigurationBuilder> Consumers { get; } = new();
+
+    private List<ProducerConfigurationBuilder> Producers { get; } = new();
 
     public ClusterConfigurationBuilder(IServiceCollection services)
     {
         _services = services;
     }
-
-    private List<ConsumerConfigurationBuilder> Consumers { get; } = new();
 
     public ClusterConfiguration Build()
     {
@@ -36,7 +43,11 @@ public class ClusterConfigurationBuilder : IClusterConfigurationBuilder
 
         var serviceProvider = _services.BuildServiceProvider();
 
-        clusterConfiguration.Consumers = Consumers.Select(_ => _.Build(clusterConfiguration, serviceProvider)).ToList();
+        clusterConfiguration.Producers = Producers.Select(
+            _ => _.Build(clusterConfiguration)).ToList();
+
+        clusterConfiguration.Consumers = Consumers.Select(
+            _ => _.Build(clusterConfiguration, serviceProvider)).ToList();
 
         return clusterConfiguration;
     }
@@ -59,10 +70,21 @@ public class ClusterConfigurationBuilder : IClusterConfigurationBuilder
         return this;
     }
 
-    public IClusterConfigurationBuilder AddSecurityInformation(Action<SecurityInformationBuilder> securityInformation)
+    public IClusterConfigurationBuilder AddProducer(string producerName, Action<IProducerConfigurationBuilder> producer)
     {
-        if (!string.Equals(Environment.GetEnvironmentVariable("DOTNET_ENVIRONMENT")?.ToUpper(), "Production".ToUpper(), StringComparison.OrdinalIgnoreCase))
-            return this;
+        var producerConfigurationBuilder = new ProducerConfigurationBuilder(producerName);
+
+        producer.Invoke(producerConfigurationBuilder);
+
+        Producers.Add(producerConfigurationBuilder);
+
+        return this;
+    }
+
+    public IClusterConfigurationBuilder AddSecurityInformation(bool enableSsl,
+        Action<SecurityInformationBuilder> securityInformation)
+    {
+        if (!enableSsl) return this;
 
         _securityInformationBuilder = new SecurityInformationBuilder();
 

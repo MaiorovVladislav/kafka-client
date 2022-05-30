@@ -38,7 +38,7 @@ public class ConsumerWorker : IConsumerWorker
                     {
                         var cloudEvent = JsonSerializerHelper.Deserialize<CloudEvent>(consumeResult.Message.Value);
 
-                        var context = new MessageContext
+                        var context = new ConsumeConsumeMessageContext
                         {
                             Key = consumeResult.Message.Key,
                             Value = cloudEvent,

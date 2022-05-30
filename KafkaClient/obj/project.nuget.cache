@@ -1,19 +1,19 @@
 {
   "version": 2,
-  "dgSpecHash": "Zlu9vgZXuXg4ivYD3zH/65AyVz+r38nbVB2pLlKf9beucJOrMUcyY8vuM6t9VarhTNdfI0C5N2Q3DJNg6TZBCw==",
+  "dgSpecHash": "Iomovc5aN5Eb8Jb4/uApvho5sCWnC6VF4ytniipKFRL7Uv7HBLSCQcwUAKmaoElY+PF3wH9Aho9tNY9z2hVOuw==",
   "success": true,
-  "projectFilePath": "\\\\msk.mts.ru\\MSK\\User\\Folders\\00\\01\\vvmajor8\\Desktop\\kafka-client\\kafka-client\\KafkaClient\\KafkaClient.csproj",
+  "projectFilePath": "/Users/vladislav/RiderProjects/KafkaClient/KafkaClient/KafkaClient.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\vvmajor8\\.nuget\\packages\\confluent.kafka\\1.9.0-rc10\\confluent.kafka.1.9.0-rc10.nupkg.sha512",
-    "C:\\Users\\vvmajor8\\.nuget\\packages\\librdkafka.redist\\1.9.0-rc10\\librdkafka.redist.1.9.0-rc10.nupkg.sha512",
-    "C:\\Users\\vvmajor8\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
-    "C:\\Users\\vvmajor8\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
-    "C:\\Users\\vvmajor8\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
-    "C:\\Users\\vvmajor8\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\6.0.0\\microsoft.extensions.fileproviders.abstractions.6.0.0.nupkg.sha512",
-    "C:\\Users\\vvmajor8\\.nuget\\packages\\microsoft.extensions.hosting.abstractions\\6.0.0\\microsoft.extensions.hosting.abstractions.6.0.0.nupkg.sha512",
-    "C:\\Users\\vvmajor8\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
-    "C:\\Users\\vvmajor8\\.nuget\\packages\\system.memory\\4.5.0\\system.memory.4.5.0.nupkg.sha512",
-    "C:\\Users\\vvmajor8\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    "/Users/vladislav/.nuget/packages/confluent.kafka/1.9.0-rc10/confluent.kafka.1.9.0-rc10.nupkg.sha512",
+    "/Users/vladislav/.nuget/packages/librdkafka.redist/1.9.0-rc10/librdkafka.redist.1.9.0-rc10.nupkg.sha512",
+    "/Users/vladislav/.nuget/packages/microsoft.extensions.configuration.abstractions/6.0.0/microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
+    "/Users/vladislav/.nuget/packages/microsoft.extensions.dependencyinjection/6.0.0/microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
+    "/Users/vladislav/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/6.0.0/microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "/Users/vladislav/.nuget/packages/microsoft.extensions.fileproviders.abstractions/6.0.0/microsoft.extensions.fileproviders.abstractions.6.0.0.nupkg.sha512",
+    "/Users/vladislav/.nuget/packages/microsoft.extensions.hosting.abstractions/6.0.0/microsoft.extensions.hosting.abstractions.6.0.0.nupkg.sha512",
+    "/Users/vladislav/.nuget/packages/microsoft.extensions.primitives/6.0.0/microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "/Users/vladislav/.nuget/packages/system.memory/4.5.0/system.memory.4.5.0.nupkg.sha512",
+    "/Users/vladislav/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

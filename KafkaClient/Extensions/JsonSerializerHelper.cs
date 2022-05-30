@@ -16,4 +16,9 @@ public static class JsonSerializerHelper
     {
         return JsonSerializer.Deserialize<TOutput>(json, JsonSerializerOptions)!;
     }
+    
+    public static string Serialize<TInput>(TInput @event)
+    {
+        return JsonSerializer.Serialize(@event, JsonSerializerOptions)!;
+    }
 }
