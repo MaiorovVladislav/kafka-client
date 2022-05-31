@@ -12,4 +12,6 @@ public class ClusterConfiguration
     public string BootstrapsServers { get; init; } = default!;
 
     public SecurityInformation? SecurityInformation { get; init; }
+    
+    public IProducerAccessor? ProducersAccessor { get; set; }
 }

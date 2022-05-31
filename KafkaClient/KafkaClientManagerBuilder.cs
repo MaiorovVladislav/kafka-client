@@ -20,11 +20,11 @@ public class KafkaClientManagerBuilder
         cluster.Invoke(clusterConfigurationBuilder);
 
         var clusterConfiguration = clusterConfigurationBuilder.Build();
-
-        var producerAccessor = new ProducerAccessor(clusterConfiguration.Producers.Select(_ => _.CreateProducer()));
         
-        _services.AddSingleton((IProducerAccessor)producerAccessor);
-
-        return new KafkaClientManager(clusterConfiguration, producerAccessor);
+        var kafkaClientManager = new KafkaClientManager(clusterConfiguration);
+        
+        _services.AddSingleton(kafkaClientManager);
+        
+        return kafkaClientManager;
     }
 }

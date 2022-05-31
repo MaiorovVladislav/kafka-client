@@ -40,17 +40,36 @@ public class ClusterConfigurationBuilder : IClusterConfigurationBuilder
             BootstrapsServers = _bootstrapsServers,
             SecurityInformation = _securityInformationBuilder?.Build()
         };
+        
+        BuildProducer(clusterConfiguration);
+        BuildConsumer(clusterConfiguration);
 
-        var serviceProvider = _services.BuildServiceProvider();
-
+        return clusterConfiguration;
+    }
+    private ClusterConfiguration BuildProducer(ClusterConfiguration clusterConfiguration)
+    {
         clusterConfiguration.Producers = Producers.Select(
             _ => _.Build(clusterConfiguration)).ToList();
+
+        clusterConfiguration.ProducersAccessor = 
+            new ProducerAccessor(clusterConfiguration.Producers.Select(_ => _.CreateProducer()));
+
+        _services.AddSingleton((IProducerAccessor)clusterConfiguration.ProducersAccessor);
+
+        return clusterConfiguration;
+    }
+
+    private ClusterConfiguration BuildConsumer(ClusterConfiguration clusterConfiguration)
+    {
+        var serviceProvider = _services.BuildServiceProvider();
 
         clusterConfiguration.Consumers = Consumers.Select(
             _ => _.Build(clusterConfiguration, serviceProvider)).ToList();
 
         return clusterConfiguration;
     }
+
+
 
     public IClusterConfigurationBuilder AddBootstrapsServers(string bootstrapsServers)
     {

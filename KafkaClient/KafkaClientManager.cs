@@ -10,14 +10,13 @@ public class KafkaClientManager
 
     public ClusterConfiguration? Cluster { get; }
 
-    public IProducerAccessor ProducerAccessor { get; }
+    public IProducerAccessor? ProducerAccessor => Cluster?.ProducersAccessor;
 
     private List<ConsumerConfiguration>? ConsumerConfigurations => Cluster?.Consumers;
 
-    public KafkaClientManager(ClusterConfiguration clusterConfiguration, IProducerAccessor producerAccessor)
+    public KafkaClientManager(ClusterConfiguration clusterConfiguration)
     {
         Cluster = clusterConfiguration;
-        ProducerAccessor = producerAccessor;
     }
 
     public async Task StartAsync(CancellationToken cancellationToken)

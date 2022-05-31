@@ -27,17 +27,23 @@ collection.AddKafkaHostedService(builder => builder
         .AddProducer("ProducerErrorMessage", producer => producer
             .SetTopicDestination("testTopic"))));
 
-
-var provider = collection.BuildServiceProvider();
-var accessor = (IProducerAccessor) provider.GetRequiredService(typeof(IProducerAccessor));
-
-var producerError = accessor.GetProducer("ErrorProducer");
-await producerError?.ProduceAsync("123", new CloudEvent(), CancellationToken.None)!;
-
-Console.WriteLine(producerError.ProducerName);
+//
+// var provider = collection.BuildServiceProvider();
+// var accessor = (IProducerAccessor) provider.GetRequiredService(typeof(IProducerAccessor));
+//
+// var producerError = accessor.GetProducer("ErrorProducer");
+// await producerError?.ProduceAsync("123", new CloudEvent(), CancellationToken.None)!;
+//
+// Console.WriteLine(producerError.ProducerName);
 
 public class CloudEventMessageHandler : IMessageHandler
 {
+    private readonly Producer _producer;
+    public CloudEventMessageHandler(IProducerAccessor accessor)
+    {
+        _producer = accessor.GetProducer("ProducerErrorMessage");
+    }
+
     public Task Invoke(IConsumeMessageContext<string, CloudEvent> context)
     {
         throw new NotImplementedException();
